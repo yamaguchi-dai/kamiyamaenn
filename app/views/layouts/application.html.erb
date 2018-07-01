@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Workspace</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>神山園 | <%= yield(:title) %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= stylesheet_link_tag 'materialize.css' %>
+  <%= stylesheet_link_tag "common.css" %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+<nav class="light-green header" role="navigation">
+  <div class="nav-wrapper">
+    <ul class="center hide-on-med-and-down">
+      <li><a href="" class="brand-logo center">神山園</a></li>
+    </ul>
+
+
+    <ul class="left">
+      <li><a href="" class="brand-logo left"></a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<div style="margin-left: 30px;margin-right: 30px">
+  <%= yield %>
+</div>
+</body>
+
+<%= javascript_include_tag "jquery-3.3.1.js" %>
+<%= javascript_include_tag "materialize.js" %>
+<%= javascript_include_tag "common.js" %>
 </html>
